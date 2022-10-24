@@ -24,7 +24,7 @@
                 <!--begin::Edit-->
                 <div id="kt_signin_email_edit" class="flex-row-fluid d-none">
                     <!--begin::Form-->
-                    <form id="kt_signin_change_email" class="form" novalidate="novalidate" method="POST" action="{{ route('settings.changeEmail') }}">
+                    <form id="kt_signin_change_email" class="form" novalidate="novalidate" method="POST" action="{{ route('account.changeEmail') }}">
                         @csrf
                         @method('PUT')
                         <input type="hidden" name="current_email" value="{{ auth()->user()->email }} "/>
@@ -77,7 +77,7 @@
                 <!--begin::Edit-->
                 <div id="kt_signin_password_edit" class="flex-row-fluid d-none">
                     <!--begin::Form-->
-                    <form id="kt_signin_change_password" class="form" novalidate="novalidate" method="POST" action="{{ route('settings.changePassword') }}">
+                    <form id="kt_signin_change_password" class="form" novalidate="novalidate" method="POST" action="{{ route('account.changePassword') }}">
                         @csrf
                         @method('PUT')
                         <input type="hidden" name="current_email" value="{{ auth()->user()->email }} "/>

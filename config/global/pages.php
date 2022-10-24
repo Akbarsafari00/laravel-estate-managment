@@ -181,7 +181,6 @@ return array(
     'account' => array(
         'overview' => array(
             'title' => 'Account Overview',
-            'view' => 'account/overview/overview',
             'assets' => array(
                 'custom' => array(
                     'js' => array(

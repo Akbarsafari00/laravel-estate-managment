@@ -271,6 +271,7 @@ return array(
                 'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
                 'font' => '<i class="bi bi-person fs-2"></i>',
             ),
+            'permission' => array('account detail','account update'),
             'classes' => array('item' => 'menu-accordion'),
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
@@ -282,11 +283,13 @@ return array(
                         'title' => 'مشاهده',
                         'path' => 'account/overview',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('account detail'),
                     ),
                     array(
                         'title' => 'ویرایش',
-                        'path' => 'account/settings',
+                        'path' => 'account/profile',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('account update'),
                     )
                 ),
             ),
@@ -294,6 +297,7 @@ return array(
         array(
             'classes' => array('content' => 'pt-8 pb-2'),
             'content' => '<span class="menu-section text-muted text-uppercase fs-8 ls-1">مدیریت سیستم</span>',
+            'permission' => array('audit-log index','system-log create'),
         ),
 
         // System
@@ -307,7 +311,7 @@ return array(
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
             ),
-
+            'permission' => array('audit-log index','system-log create'),
             'sub' => array(
                 'class' => 'menu-sub-accordion menu-active-bg',
                 'items' => array(
@@ -322,6 +326,7 @@ return array(
                         'title' => 'گزارش سیستم',
                         'path' => 'log/system',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('system-log index'),
                     ),
                 ),
             ),

@@ -10,8 +10,22 @@ use App\Models\UserInfo;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
-class SettingsController extends Controller
+class AccountController extends Controller
 {
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function overview()
+    {
+        $info = auth()->user()->info;
+
+        // get the default inner page
+        return view('pages.account.overview.index', compact('info'));
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +36,7 @@ class SettingsController extends Controller
         $info = auth()->user()->info;
 
         // get the default inner page
-        return view('pages.account.settings.settings', compact('info'));
+        return view('pages.account.profile.index', compact('info'));
     }
 
     /**
@@ -73,7 +87,7 @@ class SettingsController extends Controller
 
         $info->save();
 
-        return redirect()->intended('account/settings');
+        return redirect()->intended('account/profile');
     }
 
     /**
@@ -106,7 +120,7 @@ class SettingsController extends Controller
     {
         // prevent change email for demo account
         if ($request->input('current_email') === 'demo@demo.com') {
-            return redirect()->intended('account/settings');
+            return redirect()->intended('account/profile');
         }
 
         auth()->user()->update(['email' => $request->input('email')]);
@@ -115,7 +129,7 @@ class SettingsController extends Controller
             return response()->json($request->all());
         }
 
-        return redirect()->intended('account/settings');
+        return redirect()->intended('account/profile');
     }
 
     /**
@@ -127,7 +141,7 @@ class SettingsController extends Controller
     {
         // prevent change password for demo account
         if ($request->input('current_email') === 'demo@demo.com') {
-            return redirect()->intended('account/settings');
+            return redirect()->intended('account/profile');
         }
 
         auth()->user()->update(['password' => Hash::make($request->input('password'))]);
@@ -136,6 +150,6 @@ class SettingsController extends Controller
             return response()->json($request->all());
         }
 
-        return redirect()->intended('account/settings');
+        return redirect()->intended('account/profile');
     }
 }

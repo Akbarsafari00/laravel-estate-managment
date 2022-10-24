@@ -14,7 +14,7 @@
     <!--begin::Content-->
     <div id="kt_account_profile_details" class="collapse show">
         <!--begin::Form-->
-        <x-forms.user-update-form :action="route('settings.update')" :user="auth()->user()" :info="$info"/>
+        <x-forms.user-update-form :action="route('account.profile')" :user="auth()->user()" :info="$info"/>
         <!--end::Form-->
     </div>
     <!--end::Content-->

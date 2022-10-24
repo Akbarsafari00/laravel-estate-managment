@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Account\SettingsController;
+use App\Http\Controllers\Account\AccountController;
 use App\Http\Controllers\Auth\SocialiteLoginController;
 use App\Http\Controllers\Documentation\ReferencesController;
 use App\Http\Controllers\Logs\AuditLogsController;
@@ -41,10 +41,29 @@ array_walk($menu, function ($val) {
 Route::middleware('auth')->group(function () {
     // Account pages
     Route::prefix('account')->group(function () {
-        Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
-        Route::put('settings', [SettingsController::class, 'update'])->name('settings.update');
-        Route::put('settings/email', [SettingsController::class, 'changeEmail'])->name('settings.changeEmail');
-        Route::put('settings/password', [SettingsController::class, 'changePassword'])->name('settings.changePassword');
+
+        Route::get('overview', [AccountController::class, 'overview'])
+            ->middleware(['permission:account detail'])
+            ->name('account.overview');
+
+
+        Route::get('profile', [AccountController::class, 'index'])
+            ->middleware(['permission:account update'])
+            ->name('account.profile');
+
+        Route::put('profile', [AccountController::class, 'update'])
+            ->middleware(['permission:account update'])
+            ->name('account.profile');
+
+
+        Route::put('change-email', [AccountController::class, 'changeEmail'])
+            ->middleware(['permission:account change-email'])
+            ->name('account.changeEmail');
+
+
+        Route::put('change-password', [AccountController::class, 'changePassword'])
+            ->middleware(['permission:account change-password'])
+            ->name('account.changePassword');
     });
 
     // Logs pages
@@ -59,68 +78,67 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('users')->name('users.')->group(function () {
 
-        Route::get('', [UsersController::class,'index'])
+        Route::get('', [UsersController::class, 'index'])
             ->middleware(['permission:user index'])
             ->name('index');
 
-        Route::get('edit/{id}', [UsersController::class,'edit'])
+        Route::get('edit/{id}', [UsersController::class, 'edit'])
             ->middleware(['permission:user update'])
             ->name('edit');
 
-        Route::get('details/{id}', [UsersController::class,'show'])
-            ->middleware(['permission:user details'])
+        Route::get('details/{id}', [UsersController::class, 'show'])
+            ->middleware(['permission:user detail'])
             ->name('show');
 
-        Route::get('delete/{id}', [UsersController::class,'delete'])
+        Route::get('delete/{id}', [UsersController::class, 'delete'])
             ->middleware(['permission:user delete'])
             ->name('delete');
 
-        Route::get('create', [UsersController::class,'create'])
+        Route::get('create', [UsersController::class, 'create'])
             ->middleware(['permission:user create'])
             ->name('create');
 
-        Route::post('', [UsersController::class,'store'])
+        Route::post('', [UsersController::class, 'store'])
             ->middleware(['permission:user create'])
             ->name('store');
 
-        Route::put('{id}', [UsersController::class,'update'])
+        Route::put('{id}', [UsersController::class, 'update'])
             ->middleware(['permission:user update'])
             ->name('update');
 
-        Route::delete('{id}', [UsersController::class,'destroy'])
+        Route::delete('{id}', [UsersController::class, 'destroy'])
             ->middleware(['permission:user delete'])
             ->name('destroy');
     });
 
     Route::prefix('roles')->name('roles.')->group(function () {
-        Route::get('', [RolesController::class,'index'])
+        Route::get('', [RolesController::class, 'index'])
             ->middleware(['permission:role index'])
             ->name('index');
-        Route::get('edit/{id}', [RolesController::class,'edit'])
+        Route::get('edit/{id}', [RolesController::class, 'edit'])
             ->middleware(['permission:role update'])
             ->name('edit');
-        Route::get('details/{id}', [RolesController::class,'show'])
-            ->middleware(['permission:role details'])
+        Route::get('details/{id}', [RolesController::class, 'show'])
+            ->middleware(['permission:role detail'])
             ->name('show');
-        Route::get('delete/{id}', [RolesController::class,'delete'])
+        Route::get('delete/{id}', [RolesController::class, 'delete'])
             ->middleware(['permission:role delete'])
             ->name('delete');
-        Route::get('create', [RolesController::class,'create'])
+        Route::get('create', [RolesController::class, 'create'])
             ->middleware(['permission:role create'])
             ->name('create');
-        Route::post('', [RolesController::class,'store'])
+        Route::post('', [RolesController::class, 'store'])
             ->middleware(['permission:role create'])
             ->name('store');
-        Route::put('{id}', [RolesController::class,'update'])
+        Route::put('{id}', [RolesController::class, 'update'])
             ->middleware(['permission:role update'])
             ->name('update');
-        Route::delete('{id}', [RolesController::class,'destroy'])
+        Route::delete('{id}', [RolesController::class, 'destroy'])
             ->middleware(['permission:role delete'])
             ->name('destroy');
     });
 
 });
-
 
 
 /**
@@ -129,4 +147,4 @@ Route::middleware('auth')->group(function () {
  */
 Route::get('/auth/redirect/{provider}', [SocialiteLoginController::class, 'redirect']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -1,7 +1,7 @@
 @php
     $nav = array(
         array('title' => 'اطلاعات', 'view' => 'account/overview'),
-        array('title' => 'ویرایش', 'view' => 'account/settings'),
+        array('title' => 'ویرایش', 'view' => 'account/profile'),
         // array('title' => 'Security', 'view' => ''),
     );
 @endphp

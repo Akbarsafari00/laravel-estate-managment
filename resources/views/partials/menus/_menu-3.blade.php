@@ -98,7 +98,7 @@
 
     <!--begin::Menu item-->
     <div class="menu-item px-3 my-1">
-        <a href="{{ theme()->getPageUrl('account/settings') }}" class="menu-link px-3">
+        <a href="{{ theme()->getPageUrl('account/profile') }}" class="menu-link px-3">
             Settings
         </a>
     </div>
