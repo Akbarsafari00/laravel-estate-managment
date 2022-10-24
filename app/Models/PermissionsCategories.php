@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Eloquent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use mysql_xdevapi\Exception;
@@ -9,6 +10,10 @@ use Spatie\Permission\Exceptions\PermissionAlreadyExists;
 use Spatie\Permission\Guard;
 use Spatie\Permission\Models\Permission;
 
+
+/**
+ * @mixin Eloquent
+ * */
 class PermissionsCategories extends Model
 {
     use HasFactory;

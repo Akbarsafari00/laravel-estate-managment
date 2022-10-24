@@ -203,4 +203,161 @@ return array(
             ),
         ),
     ),
+
+    'estate-types' => array(
+        'title' => 'لیست نوع ملک ها',
+        'assets' => array(
+            'custom' => array(
+                'css' => array(
+                    'plugins/custom/datatables/datatables.bundle.css',
+                ),
+                'js' => array(
+                    'plugins/custom/datatables/datatables.bundle.js',
+                ),
+            ),
+        ),
+        'edit' => array(
+            '*'=>array(
+                'title' => 'ویرایش نوع ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        ),
+        'delete' => array(
+            '*'=>array(
+                'title' => 'حذف نوع ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        )
+    ),
+    'estate-document-types' => array(
+        'title' => 'لیست سند ملک ها',
+        'assets' => array(
+            'custom' => array(
+                'css' => array(
+                    'plugins/custom/datatables/datatables.bundle.css',
+                ),
+                'js' => array(
+                    'plugins/custom/datatables/datatables.bundle.js',
+                ),
+            ),
+        ),
+        'edit' => array(
+            '*'=>array(
+                'title' => 'ویرایش سند ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        ),
+        'delete' => array(
+            '*'=>array(
+                'title' => 'حذف سند ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        )
+    ),
+    'estate-features' => array(
+        'title' => 'لیست امکانات ملک ها',
+        'assets' => array(
+            'custom' => array(
+                'css' => array(
+                    'plugins/custom/datatables/datatables.bundle.css',
+                ),
+                'js' => array(
+                    'plugins/custom/datatables/datatables.bundle.js',
+                ),
+            ),
+        ),
+        'edit' => array(
+            '*'=>array(
+                'title' => 'ویرایش امکانات ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        ),
+        'delete' => array(
+            '*'=>array(
+                'title' => 'حذف امکانات ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        )
+    ),
+    'estate-subscriptions' => array(
+        'title' => 'لیست اشتراکات ملک ها',
+        'assets' => array(
+            'custom' => array(
+                'css' => array(
+                    'plugins/custom/datatables/datatables.bundle.css',
+                ),
+                'js' => array(
+                    'plugins/custom/datatables/datatables.bundle.js',
+                ),
+            ),
+        ),
+        'edit' => array(
+            '*'=>array(
+                'title' => 'ویرایش اشتراکات ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        ),
+        'delete' => array(
+            '*'=>array(
+                'title' => 'حذف اشتراکات ملک',
+                'assets' => array(
+                    'custom' => array(
+                        'css' => array(
+                        ),
+                        'js' => array(
+                        ),
+                    ),
+                ),
+            )
+        )
+    ),
 );

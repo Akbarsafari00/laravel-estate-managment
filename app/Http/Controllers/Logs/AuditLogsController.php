@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Logs;
+namespace App\Http\Controllers\Estates\Logs;
 
-use App\DataTables\Logs\AuditLogsDataTable;
-use App\Http\Controllers\Controller;
+use App\DataTables\Estates\Logs\AuditLogsDataTable;
+use App\Http\Controllers\Estates\Controller;
 use Spatie\Activitylog\Models\Activity;
 
 class AuditLogsController extends Controller

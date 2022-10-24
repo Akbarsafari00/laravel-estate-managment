@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Account;
+namespace App\Http\Controllers\Estates\Account;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Estates\Controller;
 use App\Http\Requests\Account\SettingsEmailRequest;
 use App\Http\Requests\Account\SettingsInfoRequest;
 use App\Http\Requests\Account\SettingsPasswordRequest;

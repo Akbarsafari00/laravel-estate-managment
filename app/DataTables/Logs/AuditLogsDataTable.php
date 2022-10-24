@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Logs;
+namespace App\DataTables\Estates\Logs;
 
 use Spatie\Activitylog\Models\Activity;
 use Yajra\DataTables\Html\Column;

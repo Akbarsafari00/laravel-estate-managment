@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\UsersDataTable;
+use App\DataTables\Estates\UsersDataTable;
 use App\Http\Requests\Account\SettingsInfoRequest;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;

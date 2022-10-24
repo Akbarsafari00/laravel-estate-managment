@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Logs;
+namespace App\DataTables\Estates\Logs;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;

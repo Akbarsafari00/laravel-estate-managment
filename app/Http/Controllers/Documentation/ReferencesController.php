@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Documentation;
+namespace App\Http\Controllers\Estates\Documentation;
 
 use App\Core\Adapters\Theme;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Estates\Controller;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\Finder\Exception\DirectoryNotFoundException;
 

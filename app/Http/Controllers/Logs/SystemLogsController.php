@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Logs;
+namespace App\Http\Controllers\Estates\Logs;
 
-use App\DataTables\Logs\SystemLogsDataTable;
-use App\Http\Controllers\Controller;
+use App\DataTables\Estates\Logs\SystemLogsDataTable;
+use App\Http\Controllers\Estates\Controller;
 use Jackiedo\LogReader\LogReader;
 
 class SystemLogsController extends Controller

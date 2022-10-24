@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\RolesDataTable;
-use App\DataTables\UsersDataTable;
+use App\DataTables\Estates\RolesDataTable;
+use App\DataTables\Estates\UsersDataTable;
 use App\Http\Requests\Account\SettingsInfoRequest;
 use App\Http\Requests\CreateRoleRequest;
 use App\Http\Requests\CreateUserRequest;

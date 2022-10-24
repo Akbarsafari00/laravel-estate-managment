@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Estates\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Estates\Controller;
 use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Auth\Events\Verified;

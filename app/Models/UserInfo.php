@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use App\Core\Traits\SpatieLogsActivity;
+use Eloquent;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * @mixin Eloquent
+ * */
 class UserInfo extends Model
 {
     use SpatieLogsActivity;

@@ -204,7 +204,7 @@ return array(
 
         array(
             'classes' => array('content' => 'pt-8 pb-2'),
-            'permission' => array('user index','user create','role index','role create'),
+            'permission' => array('user index', 'user create', 'role index', 'role create'),
             'content' => '<span class="menu-section text-muted text-uppercase fs-8 ls-1">مدیریت کاربران</span>',
         ),
         array(
@@ -214,7 +214,7 @@ return array(
                 'font' => '<i class="bi bi-person fs-2"></i>',
             ),
             'classes' => array('item' => 'menu-accordion'),
-            'permission' => array('user index','user create'),
+            'permission' => array('user index', 'user create'),
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
             ),
@@ -243,7 +243,7 @@ return array(
                 'font' => '<i class="bi bi-person fs-2"></i>',
             ),
             'classes' => array('item' => 'menu-accordion'),
-            'permission' => array('role index','role create'),
+            'permission' => array('role index', 'role create'),
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
             ),
@@ -271,7 +271,7 @@ return array(
                 'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
                 'font' => '<i class="bi bi-person fs-2"></i>',
             ),
-            'permission' => array('account detail','account update'),
+            'permission' => array('account detail', 'account update'),
             'classes' => array('item' => 'menu-accordion'),
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
@@ -296,8 +296,128 @@ return array(
         ),
         array(
             'classes' => array('content' => 'pt-8 pb-2'),
+            'permission' => array('estate-type index','estate-subscription index','estate-document-type index','estate-feature'),
+            'content' => '<span class="menu-section text-muted text-uppercase fs-8 ls-1">مدیریت املاک</span>',
+        ),
+        array(
+            'title' => 'ملک',
+            'icon' => array(
+                'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
+                'font' => '<i class="bi bi-person fs-2"></i>',
+            ),
+            'classes' => array('item' => 'menu-accordion'),
+            'permission' => array('estate index'),
+            'attributes' => array(
+                "data-kt-menu-trigger" => "click",
+            ),
+            'sub' => array(
+                'class' => 'menu-sub-accordion menu-active-bg',
+                'items' => array(
+                    array(
+                        'title' => 'مشاهده لیست',
+                        'path' => 'estates',
+                        'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('estate index'),
+                    )
+                ),
+            ),
+        ),
+        array(
+            'title' => 'نوع ملک',
+            'icon' => array(
+                'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
+                'font' => '<i class="bi bi-person fs-2"></i>',
+            ),
+            'classes' => array('item' => 'menu-accordion'),
+            'permission' => array('estate-type index'),
+            'attributes' => array(
+                "data-kt-menu-trigger" => "click",
+            ),
+            'sub' => array(
+                'class' => 'menu-sub-accordion menu-active-bg',
+                'items' => array(
+                    array(
+                        'title' => 'مشاهده لیست',
+                        'path' => 'estate-types',
+                        'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('estate-type index'),
+                    )
+                ),
+            ),
+        ),
+        array(
+            'title' => 'نوع سند',
+            'icon' => array(
+                'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
+                'font' => '<i class="bi bi-person fs-2"></i>',
+            ),
+            'classes' => array('item' => 'menu-accordion'),
+            'permission' => array('estate-document-type index'),
+            'attributes' => array(
+                "data-kt-menu-trigger" => "click",
+            ),
+            'sub' => array(
+                'class' => 'menu-sub-accordion menu-active-bg',
+                'items' => array(
+                    array(
+                        'title' => 'مشاهده لیست',
+                        'path' => 'estate-document-types',
+                        'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('estate-document-type index'),
+                    )
+                ),
+            ),
+        ),
+        array(
+            'title' => 'امکانات',
+            'icon' => array(
+                'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
+                'font' => '<i class="bi bi-person fs-2"></i>',
+            ),
+            'classes' => array('item' => 'menu-accordion'),
+            'permission' => array('estate-feature index'),
+            'attributes' => array(
+                "data-kt-menu-trigger" => "click",
+            ),
+            'sub' => array(
+                'class' => 'menu-sub-accordion menu-active-bg',
+                'items' => array(
+                    array(
+                        'title' => 'مشاهده لیست',
+                        'path' => 'estate-features',
+                        'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('estate-feature index'),
+                    )
+                ),
+            ),
+        ),
+        array(
+            'title' => 'اشتراکات',
+            'icon' => array(
+                'svg' => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
+                'font' => '<i class="bi bi-person fs-2"></i>',
+            ),
+            'classes' => array('item' => 'menu-accordion'),
+            'permission' => array('estate-subscription index'),
+            'attributes' => array(
+                "data-kt-menu-trigger" => "click",
+            ),
+            'sub' => array(
+                'class' => 'menu-sub-accordion menu-active-bg',
+                'items' => array(
+                    array(
+                        'title' => 'مشاهده لیست',
+                        'path' => 'estate-subscriptions',
+                        'bullet' => '<span class="bullet bullet-dot"></span>',
+                        'permission' => array('estate-subscription index'),
+                    )
+                ),
+            ),
+        ),
+        array(
+            'classes' => array('content' => 'pt-8 pb-2'),
             'content' => '<span class="menu-section text-muted text-uppercase fs-8 ls-1">مدیریت سیستم</span>',
-            'permission' => array('audit-log index','system-log create'),
+            'permission' => array('audit-log index', 'system-log create'),
         ),
 
         // System
@@ -311,7 +431,7 @@ return array(
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
             ),
-            'permission' => array('audit-log index','system-log create'),
+            'permission' => array('audit-log index', 'system-log create'),
             'sub' => array(
                 'class' => 'menu-sub-accordion menu-active-bg',
                 'items' => array(
