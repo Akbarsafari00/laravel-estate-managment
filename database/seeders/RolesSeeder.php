@@ -16,28 +16,17 @@ class RolesSeeder extends Seeder
     public function run()
     {
 
-        $admin = Role::create([
-            'name' => 'admin',
-            'title'=> 'مدیر',
-            'editable'=> false
-        ]) ;
+        $data = config('role.data');
 
-        $admin->givePermissionTo([
-            'audit-log index',
-            'audit-log detail',
-            'audit-log delete',
-            'user index',
-            'user detail',
-            'user create',
-            'user update',
-            'user delete',
-            'role index',
-            'role detail',
-            'role create',
-            'role update',
-            'role delete'
-        ]);
-        $admin->save();
+        foreach ($data as $item ){
+            $role = Role::create([
+                'name' => $item['name'],
+                'title'=> $item['title'],
+                'editable'=> $item['editable']
+            ]) ;
 
+            $role->givePermissionTo($item['permissions']);
+            $role->save();
+        }
     }
 }

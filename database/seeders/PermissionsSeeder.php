@@ -17,7 +17,7 @@ class PermissionsSeeder extends Seeder
     {
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        $data = $this->data();
+        $data = config('permission.data');;
 
         foreach ($data as $cat) {
 
@@ -37,41 +37,5 @@ class PermissionsSeeder extends Seeder
         }
     }
 
-    public function data()
-    {
-        return [
-            [
-                'title' => 'کاربران',
-                'name' => 'user',
-                'permissions' => [
-                    ['name' => 'user create', 'title' => 'ساخت'],
-                    ['name' => 'user update', 'title' => 'ویرایش'],
-                    ['name' => 'user delete', 'title' => 'حذف'],
-                    ['name' => 'user index', 'title' => 'لیست'],
-                    ['name' => 'user detail', 'title' => 'جزئیات'],
-                ],
-            ],
-            [
-                'title' => 'نقش های کاربری',
-                'name' => 'role',
-                'permissions' => [
-                    ['name' => 'role create', 'title' => 'ساخت'],
-                    ['name' => 'role update', 'title' => 'ویرایش'],
-                    ['name' => 'role delete', 'title' => 'حذف'],
-                    ['name' => 'role index', 'title' => 'لیست'],
-                    ['name' => 'role detail', 'title' => 'جزئیات'],
-                ],
-            ],
-            [
-                'title' => 'لاگ های حسابرسی',
-                'name' => 'audit-log',
-                'permissions' => [
-                    ['name' => 'audit-log index', 'title' => 'لیست'],
-                    ['name' => 'audit-log detail', 'title' => 'جزئیات'],
-                    ['name' => 'audit-log delete', 'title' => 'حذف'],
-                ],
-            ]
-        ];
 
-    }
 }

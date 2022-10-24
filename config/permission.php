@@ -140,4 +140,112 @@ return [
 
         'store' => 'default',
     ],
+    'data' => [
+        [
+            'title' => 'حساب کاربری',
+            'name' => 'account',
+            'permissions' => [
+                ['name' => 'account update', 'title' => 'ویرایش'],
+                ['name' => 'account delete', 'title' => 'حذف'],
+                ['name' => 'account detail', 'title' => 'جزئیات'],
+                ['name' => 'account change-password', 'title' => 'تغیر کلمه عبور'],
+                ['name' => 'account change-email', 'title' => 'تغیر ایمیل'],
+            ],
+        ],
+        [
+            'title' => 'کاربران',
+            'name' => 'user',
+            'permissions' => [
+                ['name' => 'user create', 'title' => 'ساخت'],
+                ['name' => 'user update', 'title' => 'ویرایش'],
+                ['name' => 'user delete', 'title' => 'حذف'],
+                ['name' => 'user index', 'title' => 'لیست'],
+                ['name' => 'user detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'نقش های کاربری',
+            'name' => 'role',
+            'permissions' => [
+                ['name' => 'role create', 'title' => 'ساخت'],
+                ['name' => 'role update', 'title' => 'ویرایش'],
+                ['name' => 'role delete', 'title' => 'حذف'],
+                ['name' => 'role index', 'title' => 'لیست'],
+                ['name' => 'role detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'نوع ملک',
+            'name' => 'estate-type',
+            'permissions' => [
+                ['name' => 'estate-type create', 'title' => 'ساخت'],
+                ['name' => 'estate-type update', 'title' => 'ویرایش'],
+                ['name' => 'estate-type delete', 'title' => 'حذف'],
+                ['name' => 'estate-type index', 'title' => 'لیست'],
+                ['name' => 'estate-type detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'نوع سند ملک',
+            'name' => 'estate-document-type',
+            'permissions' => [
+                ['name' => 'estate-document-type create', 'title' => 'ساخت'],
+                ['name' => 'estate-document-type update', 'title' => 'ویرایش'],
+                ['name' => 'estate-document-type delete', 'title' => 'حذف'],
+                ['name' => 'estate-document-type index', 'title' => 'لیست'],
+                ['name' => 'estate-document-type detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'امکانات ملک',
+            'name' => 'estate-feature',
+            'permissions' => [
+                ['name' => 'estate-feature create', 'title' => 'ساخت'],
+                ['name' => 'estate-feature update', 'title' => 'ویرایش'],
+                ['name' => 'estate-feature delete', 'title' => 'حذف'],
+                ['name' => 'estate-feature index', 'title' => 'لیست'],
+                ['name' => 'estate-feature detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'اشتراکات ملک',
+            'name' => 'estate-subscription',
+            'permissions' => [
+                ['name' => 'estate-subscription create', 'title' => 'ساخت'],
+                ['name' => 'estate-subscription update', 'title' => 'ویرایش'],
+                ['name' => 'estate-subscription delete', 'title' => 'حذف'],
+                ['name' => 'estate-subscription index', 'title' => 'لیست'],
+                ['name' => 'estate-subscription detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'ملک',
+            'name' => 'estate',
+            'permissions' => [
+                ['name' => 'estate create', 'title' => 'ساخت'],
+                ['name' => 'estate update', 'title' => 'ویرایش'],
+                ['name' => 'estate delete', 'title' => 'حذف'],
+                ['name' => 'estate index', 'title' => 'لیست'],
+                ['name' => 'estate detail', 'title' => 'جزئیات'],
+            ],
+        ],
+        [
+            'title' => 'لاگ های حسابرسی',
+            'name' => 'audit-log',
+            'permissions' => [
+                ['name' => 'audit-log index', 'title' => 'لیست'],
+                ['name' => 'audit-log detail', 'title' => 'جزئیات'],
+                ['name' => 'audit-log delete', 'title' => 'حذف'],
+            ],
+        ],
+        [
+            'title' => 'لاگ های سیستم',
+            'name' => 'system-log',
+            'permissions' => [
+                ['name' => 'system-log index', 'title' => 'لیست'],
+                ['name' => 'system-log detail', 'title' => 'جزئیات'],
+                ['name' => 'system-log delete', 'title' => 'حذف'],
+            ],
+        ]
+    ]
 ];
